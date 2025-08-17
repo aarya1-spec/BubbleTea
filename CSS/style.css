@@ -1,80 +1,154 @@
-/* General reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* Header & Navigation - Cute Pink Upgrade */
+header {
+    background: linear-gradient(135deg, #ff99cc, #ff66b2); /* Gradient pink */
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Colors */
-:root {
-    --blue: #1E90FF;
-    --coral: #FF6F61;
-    --green: #50C878;
-    --bg: #FFF8F0;
-    --text: #333;
+header .logo {
+    color: #fff;
+    font-size: 2em;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cute playful font */
+    font-weight: bold;
+    margin-left: 20px;
+    letter-spacing: 2px;
 }
 
-/* Body */
-body {
-    background-color: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-}
-
-/* Nav */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--blue);
-    color: white;
-}
-
-nav .nav-links {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
 
-nav .nav-links li a {
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-nav .nav-links li a:hover {
-    color: var(--coral);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--blue);
-    color: white;
-}
-
-/* Button */
-button {
     padding: 10px 20px;
-    background-color: var(--coral);
-    border: none;
-    color: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    background-color: #ff3399; /* Dark pink on hover */
+    transform: scale(1.1); /* Slight pop effect */
+    box-shadow: 0 4px 8px rgba(255, 51, 153, 0.4); /* Cute glow */
+}
+
+/* Featured Drinks Section - Cute Pink Theme */
+.featured-drinks {
+    text-align: center;
+    padding: 50px 20px;
+    background: #ffe6f0; /* Light pink background */
+    border-radius: 20px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.featured-drinks h2 {
+    color: #ff3399; /* Dark pink heading */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+.drink-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.drink-card {
+    background: #fff0f5; /* Slight pink card */
+    padding: 20px;
+    border-radius: 20px;
+    width: 200px;
+    box-shadow: 0 6px 12px rgba(255, 51, 153, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.drink-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.drink-card h3 {
+    color: #ff66b2;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.2em;
+}
+
+/* About Us Page */
+.about-hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffe6f0;
+    color: #ff4da6;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.team-card {
+    background-color: #fff0f6;
+    border: 2px solid #ffb3d9;
+    border-radius: 20px;
+    width: 220px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
-    border-radius: 8px;
-    transition: 0.3s;
+    position: relative;
 }
 
-button:hover {
-    background-color: var(--green);
+.team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff4da6;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    nav .nav-links {
-        flex-direction: column;
-    }
+.team-card h3 {
+    margin-top: 15px;
+    color: #ff1a75;
 }
+
+.team-card p {
+    font-weight: bold;
+    color: #ff66b3;
+}
+
+.team-card .bio {
+    display: none;
+    font-size: 0.9rem;
+    color: #cc0066;
+    margin-top: 10px;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(255, 77, 166, 0.4);
+}
+
+.team-card:hover .bio {
+    display: block;
+}
+
